@@ -29,11 +29,13 @@ class ChildComponent extends React.Component {
         console.log('>>> check data input: ', this.state)
     }
     //re-render
+
     render() {
+        let { name, age } = this.props;
         console.log('>>> call render: ', this.state)
         return (
             <>
-                <div>child component: {this.props.name}</div>
+                <div>child component: {name} - {age}</div>
             </>
         )
 
